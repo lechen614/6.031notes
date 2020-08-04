@@ -25,4 +25,4 @@ The reason causing bugs at **boundaries**:
 
 #### Exapmle of multiply of BigIntegers
 
-[Multiplication of BigIntegers](http://web.mit.edu/6.031/www/sp20/classes/03-testing/figures/multiply-partition.png)
+![Multiplication of BigIntegers](http://web.mit.edu/6.031/www/sp20/classes/03-testing/figures/multiply-partition.png)
