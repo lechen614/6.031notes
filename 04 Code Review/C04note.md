@@ -24,3 +24,12 @@ validate input
 
 Use named constant instead of magic numbers.
 If you have a profusion of magic numbers in your code, it can be a sign that you need to take a step back and treat those numbers as **data** rather than named constants.
+
+### One purpose for each variable
+Variables are not a scarce resource in programming. Introduce them freely, give them good names, and just stop using them when you stop needing them.
+
+### Don't use global variable
+
+### Avoid special-case code
+Actively resist the temptation to handle special cases separately,
+Re-think when writing a if statement
