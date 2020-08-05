@@ -24,5 +24,32 @@ The reason causing bugs at **boundaries**:
 - Some boundaries may need to be handles as special cases. E.g. int overflow from positive to negative
 
 #### Exapmle of multiply of BigIntegers
+Choose a and b independently from:
+- 0
+- 1
+- small positive integer (≤ `Long.MAX_VALUE` and > `1`)
+- small negative integer (≥ `Long.MIN_VALUE` and < `0`)
+- large positive integer (> `Long.MAX_VALUE`)
+- large negative integer (< `Long.MIN_VALUE`)
 
 ![Multiplication of BigIntegers](http://web.mit.edu/6.031/www/sp20/classes/03-testing/figures/multiply-partition.png)
+
+### Use mutiple partitions:
+
+Test a and b seperately
+![Multiplication of BigIntegers](http://web.mit.edu/6.031/www/sp20/classes/03-testing/figures/multiply-a-b-partition.png)
+
+Test the interaction between of a and b use another partition
+![Multiplication of BigIntegers](http://web.mit.edu/6.031/www/sp20/classes/03-testing/figures/multiply-sign-partition.png)
+
+
+### Unit test and Integration testing
+Unit test using JUnit
+
+#### Black box and glass box testing
+- **Black box testing** independent of implementation
+- **Glass box testing** choosing test cases with knowledge of how function is implemented
+
+
+### Automated regression testing
+Whenever you find and fix a bug, take the input that elicited the bug and add it to your automated test suite as a test case. This kind of test case is called a regression test
