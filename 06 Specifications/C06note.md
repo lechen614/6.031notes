@@ -22,4 +22,4 @@ Advantages of Exceptions:
 - For implementer: It shields the implementer from the details of the usage of the module
 
 The specifications result in **decoupling**
-[!decoupling](http://web.mit.edu/6.031/www/sp20/classes/06-specifications/figures/firewall.svg)
+![decoupling](http://web.mit.edu/6.031/www/sp20/classes/06-specifications/figures/firewall.svg)
