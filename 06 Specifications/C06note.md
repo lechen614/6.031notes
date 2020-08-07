@@ -23,3 +23,47 @@ Advantages of Exceptions:
 
 The specifications result in **decoupling**
 ![decoupling](http://web.mit.edu/6.031/www/sp20/classes/06-specifications/figures/firewall.svg)
+![](http://web.mit.edu/6.031/www/sp20/classes/06-specifications/figures/firewall-talk.svg)
+
+### Specification structure
+- a **method signature**, giving the name, parameter types, return type, and exceptions thrown
+- a **requires clause**, describing additional restrictions on the parameters
+- an **effects clause**, describing the return value, exceptions, and other effects of the method
+
+These three parts forms the **precondition** and **postcondition** of the method.
+
+Precondition contains :
+- parameter type
+- requires clause
+  - more restrictions on parameter, like input range
+
+Postcondition contains :
+- return type
+- effects clause
+  - how the return value relates to the input
+  - exceptions may thrown
+  - whether and how object may mutated
+
+### Specifications in Java
+parameters are described by `@param` clauses and results are described by `@return` clauses. You should put the preconditions into `@param` where possible, and postconditions into `@return`
+
+- start of comments is `/**` instead of normal comments, which is `/*`
+- `@param` and `@return` do not contain type, since it will be redundant
+- `@param` and `@return` are descriptions of requires and effects listed above
+  
+
+### Do not allow null references
+Primitive types cannot be null
+As a general convention null values are disallowed in parameters and return values unless the spec **explicitly** says otherwise
+
+### Include emptiness
+Becareful with empty cases, such as empty list, `""`
+
+### Testing and Specifications
+Test cases are subset of the preconditions.
+
+### Specifications for mutating methods
+Just as null is implicitly disallowed unless stated otherwise, programmers also assume that mutation is **disallowed unless stated** 
+
+### Exception  hierarchy
+`Exception` is the base class for all Exceptions including checked and unchecked, but not errors
